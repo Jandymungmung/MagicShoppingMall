@@ -47,9 +47,9 @@
 
 			<c:forEach items="${productList}" var="product">
 				<tr>
-					<td>${product.pruduct_number}</td>
-					<td><a href="getProduct.do?pruduct_number=${product.pruduct_number}">${product.product_name}</a></td>
-					<td>${product.price}</td>
+					<td>${product.product_number}</td>
+					<td><a href="getProduct.do?pruduct_number=${product.product_number}">${product.product_name}</a></td>
+					<td>${product.price}원</td>
 					<td>${product.registration_date}</td>
 					<td>${product.thumbnail}</td>
 				</tr>

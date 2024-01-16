@@ -36,12 +36,12 @@ public class ProductsController {
 			long timeStamp = System.currentTimeMillis();
 			String thumbnailFileName = timeStamp + "_" + thumbnail.getOriginalFilename();
 			thumbnail.transferTo(new File("C:/JavaStudy/spring2/A_MainProject_MagicShoppingMall/src/main/webapp/img/thumbnail/" + thumbnailFileName));
-			vo.setThumbnailFileName(thumbnailFileName);
+			vo.setThumbnail_file_name(thumbnailFileName);
 			
 			if(detailCut!= null) {
 				String detailCutFileName = timeStamp + "_" + detailCut.getOriginalFilename();
 				detailCut.transferTo(new File("C:/JavaStudy/spring2/A_MainProject_MagicShoppingMall/src/main/webapp/img/detailCut/" + detailCutFileName));
-				vo.setDetailCutFileName(detailCutFileName);
+				vo.setDetail_cut_file_name(thumbnailFileName);
 			}
 		}
 		

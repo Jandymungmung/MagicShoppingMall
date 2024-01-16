@@ -18,8 +18,8 @@ public class ProductsVO {
     private String detail_description;
     private String searchCondition;
     private String searchKeyword;
-    private String thumbnailFileName;
-    private String detailCutFileName;
+    private String thumbnail_file_name;
+    private String detail_cut_file_name;
     
 	public int getProduct_number() {
 		return product_number;
@@ -112,17 +112,18 @@ public class ProductsVO {
 	public void setDetail_cut(MultipartFile detail_cut) {
 		this.detail_cut = detail_cut;
 	}
-	public String getThumbnailFileName() {
-		return thumbnailFileName;
+	public String getThumbnail_file_name() {
+		return thumbnail_file_name;
 	}
-	public void setThumbnailFileName(String thumbnailFileName) {
-		this.thumbnailFileName = thumbnailFileName;
+	public void setThumbnail_file_name(String thumbnail_file_name) {
+		this.thumbnail_file_name = thumbnail_file_name;
 	}
-	public String getDetailCutFileName() {
-		return detailCutFileName;
+	public String getDetail_cut_file_name() {
+		return detail_cut_file_name;
 	}
-	public void setDetailCutFileName(String detailCutFileName) {
-		this.detailCutFileName = detailCutFileName;
+	public void setDetail_cut_file_name(String detail_cut_file_name) {
+		this.detail_cut_file_name = detail_cut_file_name;
 	}
+	
     
 }

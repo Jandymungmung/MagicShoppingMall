@@ -5,7 +5,16 @@
 <mapper namespace="ProductsDAO">
 
 	<insert id="insertProduct" parameterType="products">
-		
+		 INSERT INTO PRODUCTS (
+            product_name, product_english_name, origin, price, stock_count,
+            brief_description, thumbnail_file_name, detail_cut_file_name,
+            sold_out, categories, detail_description
+        )
+        VALUES (
+            #{product_name}, #{product_english_name}, #{origin}, #{price}, #{stock_count},
+            #{brief_description}, #{thumbnail_file_name}, #{detail_cut_file_name},
+            #{sold_out}, #{categories}, #{detail_description}
+        )
 	</insert>
 	
 	<select id="getProductList" resultType="products">
