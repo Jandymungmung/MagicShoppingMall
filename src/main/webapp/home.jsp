@@ -12,9 +12,9 @@
 </head>
 <body>
 
-	<%@ include file="/WEB-INF/include/header.jsp" %>
+	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
-	
+
 	<div id="section">
 		<div id="video">
 			<div style="margin: 50px 0 20px;">
@@ -27,58 +27,46 @@
 		</div>
 		<h2>✨ 추천 상품 ✨</h2>
 		<div id="img_container">
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/1.큰카드재생마술.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/2.어피어링버드케이지.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/3.마스크목걸이.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/4.커버케이스.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/5.오디세이.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/6.나도마술사베스트3.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/7.클리어카드가드.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/8.의자공중부양.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/9.보타니아.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/10.좀비볼.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/11.케인투플라워.jpg">
 			</div>
-			<div class="imgBox"
-				onclick="location.href='detail.jsp#none';">
+			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/12.더플로팅.jpg">
 			</div>
 		</div>
 	</div>
-	
-	<%@ include file="/WEB-INF/include/footer.jsp" %>
+
+	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->
 </body>
 </html>

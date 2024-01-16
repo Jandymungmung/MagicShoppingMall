@@ -20,7 +20,7 @@
 				<div id="path">
 					<div id="emptySpace"></div>
 					<ol>
-						<li><a href="">HOME</a></li>
+						<li><a href="home.jsp">HOME</a></li>
 						<li><a href="">왕초보</a></li>
 					</ol>
 				</div>

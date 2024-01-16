@@ -23,15 +23,12 @@ public class BoardController {
 	
 	@RequestMapping("/insertBoard.do")
 	public String insertBoard(BoardVO vo) throws IOException {
-		System.out.println(vo.getWriter());
-		System.out.println(vo.getTitle());
 		System.out.println("글 등록 처리");
 		MultipartFile uploadFile = vo.getUploadFile();
-		System.out.println(uploadFile);
 		if(uploadFile!=null) {
 			long timeStamp = System.currentTimeMillis();
 			String fileName = timeStamp + "_" + uploadFile.getOriginalFilename();
-			uploadFile.transferTo(new File("c:/fileUpload/" + fileName));
+			uploadFile.transferTo(new File("C:/JavaStudy/spring2/A_MainProject_MagicShoppingMall/src/main/webapp/img/board_img/" + fileName));
 			vo.setFile(fileName);
 		}
 		boardService.insertBoard(vo);

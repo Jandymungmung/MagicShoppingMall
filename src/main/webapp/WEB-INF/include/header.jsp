@@ -17,7 +17,8 @@
 				<c:choose>
 					<c:when test="${not empty loginOk and loginOk.userId eq 'test'}">
    	 					<li><a href="logout.do" class="top">로그아웃</a></li>
-   	 					<li><a href="home.jsp" class="top">관리 페이지</a></li>
+   	 					<li><a href="adminPage.jsp" class="top">관리 페이지</a></li>
+   	 					<li><a href="getProductList.do" class="top">상품 관리</a></li>
 					</c:when>
 					<c:when test="${not empty loginOk}">
 						<li><a href="logout.do" class="top">로그아웃</a></li>

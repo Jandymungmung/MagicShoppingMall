@@ -6,10 +6,12 @@
 	<typeAliases>
 		<typeAlias type="com.magic.www.biz.members.MembersVO" alias="members"></typeAlias>
 		<typeAlias type="com.magic.www.biz.board.BoardVO" alias="board"></typeAlias>
+		<typeAlias type="com.magic.www.biz.product.ProductsVO" alias="products"></typeAlias>
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mappings/members-mapping.xml" />
 		<mapper resource="mappings/board-mapping.xml" />
+		<mapper resource="mappings/products-mapping.xml" />
 	</mappers>
 </configuration>
