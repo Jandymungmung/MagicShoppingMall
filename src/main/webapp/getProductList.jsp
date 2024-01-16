@@ -28,7 +28,7 @@
 			<table border="1">
 				<tr>
 					<td><select name="searchCondition">
-							<option value="">상품명</option>
+							<option value="product_name">상품명</option>
 					</select> <input name="searchKeyword" type="text" /> <input type="submit"
 						value="검색" /></td>
 				</tr>
@@ -51,7 +51,7 @@
 					<td><a href="getProduct.do?pruduct_number=${product.product_number}">${product.product_name}</a></td>
 					<td>${product.price}원</td>
 					<td>${product.registration_date}</td>
-					<td>${product.thumbnail}</td>
+					<td>${product.thumbnail_file_name}</td>
 				</tr>
 			</c:forEach>
 		</table>
