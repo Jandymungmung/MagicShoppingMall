@@ -56,14 +56,16 @@
                                     보안접속
                                 </p>
                                 <ul>
-                                    <li>
+                               <!--
+                               		<li>
                                         <a href="">아이디 찾기</a>
                                     </li>
                                     <li>
                                         <a href="">비밀번호 찾기</a>
                                     </li>
+                                    -->
                                     <li>
-                                        <a href="">회원가입</a>
+                                        <a href="joinMembership.jsp">회원가입</a>
                                     </li>
                                 </ul>
                                 <ul class="snsArea">
@@ -79,13 +81,6 @@
                             <br>
                             
                 </form>
-                
-                <script>
-                	$('form').on('image', function(event){
-                		
-                	})
-                </script>
-                
             </div>
         </div>
     </div>

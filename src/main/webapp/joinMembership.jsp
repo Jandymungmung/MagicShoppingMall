@@ -229,13 +229,7 @@
 			}
 
 		}
-
-		function openIdCheckPage() {
-			// window.open(url, windowName, windowFeatures);
-			window
-					.open('idCheck.jsp', 'IdCheckWindow',
-							'width=500, height=400');
-		}
+		
 	</script>
 </body>
 

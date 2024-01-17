@@ -21,16 +21,13 @@
 					<div id="emptySpace"></div>
 					<ol>
 						<li><a href="home.jsp">HOME</a></li>
-						<li><a href="">왕초보</a></li>
 					</ol>
 				</div>
-				<div class="">
-					<div class="headingArea"></div>
-					<!--공급사 추가할 것-->
+				<div>
 					<div class="detailArea">
 						<div class="imgArea">
 							<div class="keyImg">
-								<a href=""> <img src="./img/big_product/1.큰카드재생마술z.jpg"
+								<a> <img src="./img/product/1.큰카드재생마술.jpg"
 									alt="큰카드재생마술" class="BigImage">
 								</a>
 							</div>

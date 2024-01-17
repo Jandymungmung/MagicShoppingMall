@@ -27,4 +27,13 @@ public class ProductsServiceImpl implements ProductsService {
 		return productsDAO.getProductList(vo);
 	}
 
+	@Override
+	public ProductsVO getProduct(ProductsVO vo) {
+		return productsDAO.getProduct(vo);
+	}
+
+	@Override
+	public void updateProduct(ProductsVO vo) {
+	}
+
 }

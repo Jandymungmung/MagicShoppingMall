@@ -27,4 +27,14 @@ public class ProductsDAOMybatis {
 		System.out.println("--> Mybatis로 getProductList() 처리");
 		return mybatis.selectList("ProductsDAO.getProductList", vo);
 	}
+	
+	public ProductsVO getProduct(ProductsVO vo) {
+		System.out.println("--> Mybatis로 getProduct() 처리");
+		return mybatis.selectOne("ProductsDAO.getProduct", vo);
+	}
+	
+	public void updateProduct(ProductsVO vo){
+		System.out.println("--> Mybatis로 updateProduct() 처리");
+		mybatis.update("ProductsDAO.updateProduct", vo);
+	}
 }

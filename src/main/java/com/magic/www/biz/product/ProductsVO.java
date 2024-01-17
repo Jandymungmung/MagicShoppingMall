@@ -7,7 +7,7 @@ public class ProductsVO {
     private String product_name;
     private String product_english_name;
     private String origin;
-    private double price;
+    private int price;
     private int stock_count;
     private String brief_description;
     private MultipartFile thumbnail;
@@ -45,10 +45,10 @@ public class ProductsVO {
 	public void setOrigin(String origin) {
 		this.origin = origin;
 	}
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public int getStock_count() {

@@ -6,15 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>my page</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<%@ include file="/WEB-INF/include/header.jsp" %>
 	<!-- header include -->
 	
-	<br>
-	<br>
-	<
+	
 	
 	<%@ include file="/WEB-INF/include/footer.jsp" %>
 	<!-- footer include -->

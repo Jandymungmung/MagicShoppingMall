@@ -25,7 +25,7 @@ public class BoardController {
 	public String insertBoard(BoardVO vo) throws IOException {
 		System.out.println("글 등록 처리");
 		MultipartFile uploadFile = vo.getUploadFile();
-		if(uploadFile!=null) {
+		if(!uploadFile.isEmpty()) {
 			long timeStamp = System.currentTimeMillis();
 			String fileName = timeStamp + "_" + uploadFile.getOriginalFilename();
 			uploadFile.transferTo(new File("C:/JavaStudy/spring2/A_MainProject_MagicShoppingMall/src/main/webapp/img/board_img/" + fileName));

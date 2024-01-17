@@ -17,23 +17,24 @@
 	<form action="insertBoard.do" method="post" enctype="multipart/form-data">
 		<table border="1">
 			<tr>
-				<td>작성자</td><td><input type="text" name="writer" value="${loginOk.userId}"></td>
+				<td>작성자</td><td><input style="background-color: black; color: white;" type="text" name="writer" value="${loginOk.userId}" readonly></td>
 			</tr>
 			<tr>
-				<td>제목</td><td><input type="text" name="title"></td>
+				<td>제목</td><td><input style="background-color: black; color: white;" type="text" name="title"></td>
 			</tr>
 			<tr>
-				<td>내용</td><td><textarea name="content" cols="50" rows="12"></textarea></td>
+				<td>내용</td><td><textarea style="background-color: black; color: white;" name="content" cols="50" rows="12"></textarea></td>
 			</tr>
 			<tr>
-				<td>업로드</td><td><input type="file" name="uploadFile"></td>
+				<td>업로드</td><td><input style="background-color: black; color: white;" type="file" name="uploadFile"></td>
 			</tr>			
 			<tr>
-				<td colspan="2"><input type="submit" value="등록"></td>
+				<td colspan="2"><input style="background-color: black; color: white;" type="submit" value="등록"></td>
 			</tr>
 		</table>
 	</form>
 	<a href="getBoardList.do">글 목록 가기</a>
+	
 	<%@ include file="/WEB-INF/include/footer.jsp" %>
 	<!-- footer include -->
 </body>

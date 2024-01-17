@@ -27,6 +27,7 @@ public class BoardDAOMybatis {
 	}
 	public BoardVO getBoard(BoardVO vo) {
 		System.out.println("--> Mybatis로 getBoard() 처리");
+		mybatis.update("BoardDAO.updateViewCnt", vo);
 		return mybatis.selectOne("BoardDAO.getBoard", vo);
 	}
 	public List<BoardVO> getBoardList(BoardVO vo) {

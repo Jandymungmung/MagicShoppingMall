@@ -15,7 +15,7 @@
 		<div id="nav1">
 			<ul id="user">
 				<c:choose>
-					<c:when test="${not empty loginOk and loginOk.userId eq 'test'}">
+					<c:when test="${not empty loginOk and loginOk.userId eq 'admin'}">
    	 					<li><a href="logout.do" class="top">로그아웃</a></li>
    	 					<li><a href="adminPage.jsp" class="top">관리 페이지</a></li>
    	 					<li><a href="getProductList.do" class="top">상품 관리</a></li>

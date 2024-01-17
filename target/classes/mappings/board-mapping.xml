@@ -42,4 +42,9 @@
 		ORDER BY SEQ DESC
 	</select>
 
+	<update id="updateViewCnt" parameterType="int">
+		<![CDATA[
+			UPDATE BOARD SET viewCnt = viewCnt+1 WHERE seq = #{seq}
+		]]>
+	</update>
 </mapper>

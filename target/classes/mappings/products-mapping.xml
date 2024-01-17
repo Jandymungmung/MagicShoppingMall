@@ -5,20 +5,20 @@
 <mapper namespace="ProductsDAO">
 
 	<insert id="insertProduct" parameterType="products">
-		 INSERT INTO PRODUCTS (
-            product_name, product_english_name, origin, price, stock_count,
-            brief_description, thumbnail_file_name, detail_cut_file_name,
-            sold_out, categories, detail_description
-        )
-        VALUES (
-            #{product_name}, #{product_english_name}, #{origin}, #{price}, #{stock_count},
-            #{brief_description}, #{thumbnail_file_name}, #{detail_cut_file_name},
-            #{sold_out}, #{categories}, #{detail_description}
-        )
+		INSERT INTO PRODUCTS (
+		product_name, product_english_name, origin, price, stock_count,
+		brief_description, thumbnail_file_name, detail_cut_file_name,
+		sold_out, categories, detail_description
+		)
+		VALUES (
+		#{product_name}, #{product_english_name}, #{origin}, #{price}, #{stock_count},
+		#{brief_description}, #{thumbnail_file_name}, #{detail_cut_file_name},
+		#{sold_out}, #{categories}, #{detail_description}
+		)
 	</insert>
-	
+
 	<select id="getProductList" resultType="products">
-		SELECT * 
+		SELECT *
 		FROM PRODUCTS
 		WHERE 1 = 1
 		<if test="searchCondition == 'product_name'">
@@ -26,36 +26,34 @@
 		</if>
 		ORDER BY PRODUCT_NUMBER DESC
 	</select>
-
-	<!--
-	<resultMap type="#modelname" id="YourResultSet">
-		<id property="param1" column="columnname1" />
-		<result property="param2" column="columnname2" />
-		<result property="param3" column="columnname3" />
-	</resultMap>
-
-	<select id="getAll" resultMap="YourResultSet">
-		SELECT * FROM tablename1
+	
+	<select id="getProduct" resultType="products">
+		SELECT * FROM PRODUCTS WHERE product_number = #{product_number}
 	</select>
 
-	<insert id="insertSomething" parameterType="#modelname">
-		INSERT INTO tablename1 (columnname1, columnname2, columnname3)
-		VALUES(#{value1},#{value2},#{value3})
-	</insert>
-
-	<update id="updateSomething" parameterType="#modelname">
-		UPDATE tablename1
-		SET
-		columnname1=#{param1}
-		WHERE
-		columnname2 = #{param2}
+	<update id="updateProduct" parameterType="products">
+		UPDATE products
+		SET product_name = #{product_name},
+		product_english_name = #{product_english_name},
+		origin = #{origin},
+		price = #{price},
+		stock_count = #{stock_count},
+		brief_description = #{brief_description},
+		thumbnail_file_name = #{thumbnail_file_name},
+		detail_cut_file_name = #{detail_cut_file_name},
+		sold_out = #{sold_out},
+		categories = #{categories},
+		detail_description = #{detail_description}
+		WHERE product_number = #{product_number};
 	</update>
 
-	<delete id="deleteSomething" parameterType="int">
-		DELETE FROM tablename1 WHERE
-		columnname1 = #{param1}
-	</delete>
-	
-	-->
+	<!-- <resultMap type="#modelname" id="YourResultSet"> <id property="param1" 
+		column="columnname1" /> <result property="param2" column="columnname2" /> 
+		<result property="param3" column="columnname3" /> </resultMap> <select id="getAll" 
+		resultMap="YourResultSet"> SELECT * FROM tablename1 </select> <insert id="insertSomething" 
+		parameterType="#modelname"> INSERT INTO tablename1 (columnname1, columnname2, 
+		columnname3) VALUES(#{value1},#{value2},#{value3}) </insert> <delete id="deleteSomething" 
+		parameterType="int"> DELETE FROM tablename1 WHERE columnname1 = #{param1} 
+		</delete> -->
 
 </mapper>

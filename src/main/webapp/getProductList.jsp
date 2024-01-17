@@ -48,10 +48,10 @@
 			<c:forEach items="${productList}" var="product">
 				<tr>
 					<td>${product.product_number}</td>
-					<td><a href="getProduct.do?pruduct_number=${product.product_number}">${product.product_name}</a></td>
+					<td><a href="getProduct.do?product_number=${product.product_number}">${product.product_name}</a></td>
 					<td>${product.price}원</td>
 					<td>${product.registration_date}</td>
-					<td>${product.thumbnail_file_name}</td>
+					<td><img src="./img/thumbnail/${product.thumbnail_file_name}" style="width: 90px; height: 90px"></td>
 				</tr>
 			</c:forEach>
 		</table>
