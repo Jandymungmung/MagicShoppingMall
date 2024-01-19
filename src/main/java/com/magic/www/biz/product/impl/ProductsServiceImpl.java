@@ -34,6 +34,12 @@ public class ProductsServiceImpl implements ProductsService {
 
 	@Override
 	public void updateProduct(ProductsVO vo) {
+		productsDAO.updateProduct(vo);
+	}
+
+	@Override
+	public List<ProductsVO> getRecommendedProductList(ProductsVO vo) {
+		return productsDAO.getRecommendedProductList(vo);
 	}
 
 }

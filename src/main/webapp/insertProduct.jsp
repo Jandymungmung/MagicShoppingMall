@@ -12,7 +12,7 @@
 <body>
 	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
-
+	<div style="width: 65%; margin: 0 auto;">
 	<form action="insertProduct.do" method="post"
 		enctype="multipart/form-data">
 		<table border="1">
@@ -67,15 +67,16 @@
 			</tr>
 			<tr>
 				<td>상세 설명</td>
-				<td><textarea name="detail_description" cols="50" rows="10" style="resize: none;"></textarea></td>
+				<td><textarea name="detail_description" cols="60" rows="10" style="resize: none;"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="등록"></td>
 			</tr>
 		</table>
 	</form>
+	<br>
 	<a href="getProductList.do">상품 목록 가기</a>
-
+	</div>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->
 </body>

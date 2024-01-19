@@ -12,7 +12,7 @@
 <body>
 	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
-	<div></div>
+	<div style="width: 65%; margin: 0 auto;">
 	<form action="updateBoard.do" method="post">
 		<input name="seq" type="hidden" value="${board.seq}" />
 		<table border="1">
@@ -37,7 +37,7 @@
 							<img src="./img/board_img/${board.file}" alt="Uploaded Image"
 								style="width: 400px; height: 400px; margin-bottom: 10px;">
 						</c:if>
-						<textarea name="content" cols="50" rows="10"
+						<textarea name="content" cols="70" rows="10"
 							style="margin-top: 10px; text-align: left; background-color: black; color: white;"
 							<c:if test="${sessionScope.loginOk.userId != board.writer}">
             readonly
@@ -64,6 +64,7 @@
 		<a href="insertBoard.jsp">글등록</a>&nbsp;&nbsp;&nbsp; <a
 			href="getBoardList.do">글목록</a>
 	</form>
+	</div>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->
 </body>

@@ -23,7 +23,7 @@
 					<c:when test="${not empty loginOk}">
 						<li><a href="logout.do" class="top">로그아웃</a></li>
 						<li><a href="myPage.jsp" class="top">마이페이지</a></li>
-						<li><a href="home.jsp" class="top">장바구니</a></li>
+						<li><a href="home.do" class="top">장바구니</a></li>
 					</c:when>
 					<c:otherwise>
 						<li><a href="login.jsp" class="top">로그인</a></li>
@@ -31,7 +31,7 @@
 					</c:otherwise>
 				</c:choose>
 				<li><a href="getBoardList.do" class="top">게시판</a></li>
-				<li><a href="home.jsp" class="top">즐겨찾기</a></li>
+				<li><a href="home.do" class="top">즐겨찾기</a></li>
 			</ul>
 
 			<div class="search_section">
@@ -69,7 +69,7 @@
 		</div>
 
 		<hr id="line">
-		<a href="home.jsp"> <img id="title"
+		<a href="home.do"> <img id="title"
 			src="./img/title/title.jpg">
 		</a>
 		<hr>

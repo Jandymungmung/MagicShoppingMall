@@ -23,6 +23,7 @@
 	<!-- header include -->
 	<br>
 	<br>
+	<div style="width:60% ; margin: 0 auto;">
 	<div class="container">
 		<form action="insertMember.do" class="was-validated" method="post" onsubmit="return check();">
 			<div class="form-group">
@@ -48,7 +49,7 @@
 			</div>
 			<div class="form-group">
 				<label for="userPsword">비밀번호 확인</label> <input type="password"
-					class="form-control" id="passwordCheck" placeholder="비밀번호 확인 입력"
+					class="form-control" id="passwordCheck" placeholder="비밀번호 확인"
 					required>
 				<div class="valid-feedback">&nbsp;</div>
 				<div class="invalid-feedback">입력해주세요.</div>
@@ -105,6 +106,7 @@
 		<br>
 
 
+		</div>
 	</div>
 
 	<%@ include file="/WEB-INF/include/footer.jsp"%>

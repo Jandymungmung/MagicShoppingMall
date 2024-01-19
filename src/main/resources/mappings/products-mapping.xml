@@ -11,7 +11,8 @@
 		sold_out, categories, detail_description
 		)
 		VALUES (
-		#{product_name}, #{product_english_name}, #{origin}, #{price}, #{stock_count},
+		#{product_name},
+		#{product_english_name}, #{origin}, #{price}, #{stock_count},
 		#{brief_description}, #{thumbnail_file_name}, #{detail_cut_file_name},
 		#{sold_out}, #{categories}, #{detail_description}
 		)
@@ -26,27 +27,40 @@
 		</if>
 		ORDER BY PRODUCT_NUMBER DESC
 	</select>
-	
+
 	<select id="getProduct" resultType="products">
-		SELECT * FROM PRODUCTS WHERE product_number = #{product_number}
+		SELECT * FROM PRODUCTS WHERE
+		product_number = #{product_number}
 	</select>
 
 	<update id="updateProduct" parameterType="products">
 		UPDATE products
-		SET product_name = #{product_name},
-		product_english_name = #{product_english_name},
+		SET
+		product_name = #{product_name},
+		product_english_name =
+		#{product_english_name},
 		origin = #{origin},
 		price = #{price},
 		stock_count = #{stock_count},
 		brief_description = #{brief_description},
 		thumbnail_file_name = #{thumbnail_file_name},
-		detail_cut_file_name = #{detail_cut_file_name},
+		detail_cut_file_name =
+		#{detail_cut_file_name},
 		sold_out = #{sold_out},
-		categories = #{categories},
+		categories =
+		#{categories},
 		detail_description = #{detail_description}
-		WHERE product_number = #{product_number};
+		WHERE
+		product_number = #{product_number};
 	</update>
 
+	<select id="getRecommendedProductList" resultType="products">
+		SELECT
+		THUMBNAIL_FILE_NAME
+		FROM PRODUCTS
+		ORDER BY THUMBNAIL_FILE_NAME DESC
+		LIMIT 12;
+	</select>
 	<!-- <resultMap type="#modelname" id="YourResultSet"> <id property="param1" 
 		column="columnname1" /> <result property="param2" column="columnname2" /> 
 		<result property="param3" column="columnname3" /> </resultMap> <select id="getAll" 

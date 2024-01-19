@@ -24,7 +24,7 @@ public class MembersController {
 	public String insertMember(MembersVO vo) {
 		System.out.println("회원 가입 처리");
 		membersService.insertMember(vo);
-		return "home.jsp";
+		return "home.do";
 	}
 
 //	// 회원 탈퇴
@@ -66,10 +66,10 @@ public class MembersController {
 		    MembersVO result = membersService.login(vo);
 		    if(result != null && result.getUserName().equals("관리자")) {
 		    	session.setAttribute("loginOk", result);
-		        return "home.jsp";
+		        return "home.do";
 		    } else if(result != null) {
 		    	session.setAttribute("loginOk", result);
-		        return "home.jsp";
+		        return "home.do";
 		    } else {
 		        model.addAttribute("message", "아이디 혹은 비밀번호가 일치하지 않습니다.");
 		        return "login.jsp";
@@ -79,6 +79,6 @@ public class MembersController {
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "home.jsp";
+		return "home.do";
 	}
 }

@@ -14,4 +14,6 @@ public interface ProductsService {
 	List<ProductsVO> getProductList(ProductsVO vo);
 	
 	void updateProduct(ProductsVO vo);
+
+	List<ProductsVO> getRecommendedProductList(ProductsVO vo);
 }

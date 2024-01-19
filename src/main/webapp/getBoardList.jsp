@@ -24,7 +24,7 @@
 	<!-- 검색 시작 -->
 	<br>
 	<br>
-	<div id="back">
+	<div style="width: 80%; margin: 0 auto;">
 		<form action="getBoardList.do" method="post">
 			<table border="1">
 				<tr>

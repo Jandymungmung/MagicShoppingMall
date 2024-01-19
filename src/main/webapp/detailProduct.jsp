@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>detail</title>
+<title>detail product</title>
 <link rel="stylesheet" href="./css/detail.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 				<div id="path">
 					<div id="emptySpace"></div>
 					<ol>
-						<li><a href="home.jsp">HOME</a></li>
+						<li><a href="home.do">HOME</a></li>
 					</ol>
 				</div>
 				<div>
