@@ -2,9 +2,9 @@ package com.magic.www.view.board.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,9 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.magic.www.biz.board.BoardVO;
 import com.magic.www.biz.board.impl.BoardService;
+import com.magic.www.biz.members.MembersVO;
 
 @Controller
 public class BoardController {
@@ -34,6 +36,7 @@ public class BoardController {
 		boardService.insertBoard(vo);
 		return "getBoardList.do";
 	}
+	
 	
 	@RequestMapping("/updateBoard.do")
 	public String updateBoard(@ModelAttribute("board") BoardVO vo) {
@@ -60,11 +63,24 @@ public class BoardController {
 	}	
 	
 	@RequestMapping("/getBoardList.do")
-	public String getBoardList(BoardVO vo, Model model) {
+	public ModelAndView getBoardList(BoardVO vo, ModelAndView mav) {
 		System.out.println("글 목록 검색 처리");
+		mav.addObject("pageNum",boardService.getBoardTotalPage(vo));
+		vo.setOffset((vo.getPageNum()-1)*10);
 		if(vo.getSearchCondition() == null) vo.setSearchCondition("title");
 		if(vo.getSearchKeyword() == null) vo.setSearchKeyword("");
-		model.addAttribute("boardList", boardService.getBoardList(vo));
-    	return "getBoardList.jsp";							
+		mav.addObject("boardList", boardService.getBoardList(vo));
+		mav.setViewName("getBoardList.jsp");
+    	return mav;
+	}
+	
+	@RequestMapping("/getBoardListMyPage.do")
+	public String getBoardListMyPage(BoardVO vo, Model model, HttpSession session) {
+		System.out.println("마이 페이지 글 목록 검색 처리");
+		if(vo.getSearchCondition() == null) vo.setSearchCondition("title");
+		if(vo.getSearchKeyword() == null) vo.setSearchKeyword("");
+		vo.setWriter(((MembersVO)session.getAttribute("loginOk")).getUserId());
+		model.addAttribute("boardList", boardService.getBoardListMyPage(vo));
+    	return "getBoardListMyPage.jsp";
 	}
 }

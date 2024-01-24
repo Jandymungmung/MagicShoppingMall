@@ -13,7 +13,7 @@
 
 	<%@ include file="/WEB-INF/include/header.jsp" %>
 	<!-- header include -->
-	
+	<div style="width: 65%; margin: 0 auto;">
 	<form action="insertBoard.do" method="post" enctype="multipart/form-data">
 		<table border="1">
 			<tr>
@@ -23,7 +23,7 @@
 				<td>제목</td><td><input style="background-color: black; color: white;" type="text" name="title"></td>
 			</tr>
 			<tr>
-				<td>내용</td><td><textarea style="background-color: black; color: white;" name="content" cols="50" rows="12"></textarea></td>
+				<td>내용</td><td><textarea style="background-color: black; color: white; resize: none;" name="content" cols="70" rows="23"></textarea></td>
 			</tr>
 			<tr>
 				<td>업로드</td><td><input style="background-color: black; color: white;" type="file" name="uploadFile"></td>
@@ -34,6 +34,7 @@
 		</table>
 	</form>
 	<a href="getBoardList.do">글 목록 가기</a>
+	</div>
 	
 	<%@ include file="/WEB-INF/include/footer.jsp" %>
 	<!-- footer include -->

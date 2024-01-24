@@ -13,5 +13,7 @@
 		<mapper resource="mappings/members-mapping.xml" />
 		<mapper resource="mappings/board-mapping.xml" />
 		<mapper resource="mappings/products-mapping.xml" />
+		<mapper resource="mappings/wish-mapping.xml" />
+		<mapper resource="mappings/cart-mapping.xml" />
 	</mappers>
 </configuration>

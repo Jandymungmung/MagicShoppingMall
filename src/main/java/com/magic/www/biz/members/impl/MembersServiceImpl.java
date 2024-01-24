@@ -15,10 +15,10 @@ public class MembersServiceImpl implements MembersService{
 		membersDAO.insertMember(vo);
 	}
 
-//	@Override
-//	public void updateMember(MembersVO vo) {
-//		membersDAO.updateMember(vo);
-//	}
+	@Override
+	public void updateMember(MembersVO vo) {
+		membersDAO.updateMember(vo);
+	}
 
 	@Override
 	public void deleteMember(MembersVO vo) {

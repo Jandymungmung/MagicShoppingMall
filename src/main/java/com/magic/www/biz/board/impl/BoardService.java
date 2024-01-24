@@ -14,4 +14,8 @@ public interface BoardService {
 	BoardVO getBoard(BoardVO vo);
 	
 	List<BoardVO> getBoardList(BoardVO vo);
+	
+	List<BoardVO> getBoardListMyPage(BoardVO vo);
+
+	BoardVO getBoardTotalPage(BoardVO vo);
 }

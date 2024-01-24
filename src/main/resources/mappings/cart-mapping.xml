@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CartDAO">
+
+	<insert id="insertShoppingCart" parameterType="products">
+		INSERT INTO cart (userId, product_number, quantity)
+		VALUES (#{userId}, #{product_number}, #{quantity})
+		ON DUPLICATE KEY UPDATE quantity = #{quantity};
+	</insert>
+
+	<delete id="deleteShoppingCart" parameterType="products">
+		DELETE FROM cart
+		WHERE
+		product_number = #{product_number}
+	</delete>
+
+	<select id="getShoppingCartList" resultType="products">
+		SELECT p.*, c.quantity
+		FROM
+		products p
+		JOIN cart c ON p.product_number = c.product_number
+		JOIN
+		members m ON c.userId = m.userId
+		WHERE m.userId = #{userId}
+	</select>
+</mapper>

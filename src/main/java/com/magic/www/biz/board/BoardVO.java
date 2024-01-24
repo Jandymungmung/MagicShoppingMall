@@ -17,6 +17,9 @@ public class BoardVO {
 	private String searchCondition;
 	private String searchKeyword;
 	private MultipartFile uploadFile;
+	private int totalPage;
+	private int pageNum;
+	private int offset;
 	
 	public int getSeq() {
 		return seq;
@@ -83,6 +86,24 @@ public class BoardVO {
 	}
 	public void setUploadFile(MultipartFile uploadFile) {
 		this.uploadFile = uploadFile;
+	}
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
+	public int getPageNum() {
+		return pageNum;
+	}
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
+	public int getOffset() {
+		return offset;
+	}
+	public void setOffset(int offset) {
+		this.offset = offset;
 	}
 	
 	

@@ -37,4 +37,16 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardList(vo);
 	}
 
+	@Override
+	public List<BoardVO> getBoardListMyPage(BoardVO vo) {
+		System.out.println(vo.getWriter());
+		return boardDAO.getBoardListMyPage(vo);
+	}
+
+	@Override
+	public BoardVO getBoardTotalPage(BoardVO vo) {
+		vo.setTotalPage((int)Math.ceil(boardDAO.countPost(vo)/10.0));
+		return vo;
+	}
+
 }

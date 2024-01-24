@@ -42,4 +42,19 @@ public class ProductsServiceImpl implements ProductsService {
 		return productsDAO.getRecommendedProductList(vo);
 	}
 
+	@Override
+	public ProductsVO getProductDetail(ProductsVO vo) {
+		return productsDAO.getProductDetail(vo);
+	}
+
+	@Override
+	public List<ProductsVO> getSearchProductList(ProductsVO vo) {
+		return productsDAO.getSearchProductList(vo);
+	}
+
+	@Override
+	public List<ProductsVO> getCategories(ProductsVO vo) {
+		return productsDAO.getCategories(vo);
+	}
+
 }

@@ -24,6 +24,8 @@
 	<br>
 	<br>
 	<div style="width:60% ; margin: 0 auto;">
+	<h4>회원가입</h4>
+	<br>
 	<div class="container">
 		<form action="insertMember.do" class="was-validated" method="post" onsubmit="return check();">
 			<div class="form-group">

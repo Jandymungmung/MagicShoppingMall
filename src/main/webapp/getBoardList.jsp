@@ -25,6 +25,9 @@
 	<br>
 	<br>
 	<div style="width: 80%; margin: 0 auto;">
+		<h4>자유 게시판</h4>
+		<br>
+		<br>
 		<form action="getBoardList.do" method="post">
 			<table border="1">
 				<tr>
@@ -37,7 +40,7 @@
 			</table>
 		</form>
 		<!--  검색 종료 -->
-
+		
 		<table class="table table-striped" id="table">
 			<tr>
 				<th>번호</th>
@@ -46,30 +49,25 @@
 				<th>등록일</th>
 				<th>조회수</th>
 			</tr>
-
-			<c:forEach items="${boardList}" var="board">
-				<tr>
-					<td>${board.seq}</td>
-					<td><a href="getBoard.do?seq=${board.seq}">${board.title}</a></td>
-					<td>${board.writer}</td>
-					<td>${board.upload_time}</td>
-					<td>${board.viewCnt}</td>
-				</tr>
-			</c:forEach>
+		<c:forEach items="${boardList}" var="board">
+			<tr>
+				<td>${board.seq}</td>
+				<td><a href="getBoard.do?seq=${board.seq}">${board.title}</a></td>
+				<td>${board.writer}</td>
+				<td>${board.upload_time}</td>
+				<td>${board.viewCnt}</td>
+			</tr>
+		</c:forEach>
 		</table>
+
+		<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${(pageNum.pageNum > 1) ? pageNum.pageNum-1 : 1}"><span class="bi bi-caret-left-fill"></span></a>
+		<c:forEach var="num" begin="1" end="${pageNum.totalPage}">
+			<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${num}">${num}</a>
+		</c:forEach>
+		<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${(pageNum.pageNum < pageNum.totalPage) ? pageNum.pageNum + 1 : pageNum.totalPage}"><span class="bi bi-caret-right-fill"></span></a>
 
 		<a id="writeBtn" class="btn btn-default" href="insertBoard.jsp"
 			style="color: black; background-color: white;">새글 등록</a>
-
-		<div class="text-center">
-			<ul class="pagination">
-				<li><a href="">1</a>
-				<li><a href="">2</a>
-				<li><a href="">3</a>
-				<li><a href="">4</a>
-				<li><a href="">5</a>
-			</ul>
-		</div>
 	</div>
 	<br>
 

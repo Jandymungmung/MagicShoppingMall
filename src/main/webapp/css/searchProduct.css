@@ -1,0 +1,233 @@
+body {
+	max-width: 1100px;
+	color: rgb(231, 227, 222);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(../img/background/backimg1.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#line {
+	margin: 10px 0px;
+}
+
+hr {
+	margin: 3px 0px;
+}
+
+#nav1 ul li {
+	font-size: 12px;
+	padding: 0 15px;
+	display: inline-block;
+	position: relative;
+	list-style: none;
+}
+
+#nav1 ul li a {
+	text-decoration: none;
+	color: rgb(231, 227, 222);
+	transition: color 0.3s;
+}
+
+#title {
+	position: relative;
+}
+
+#snsIcon {
+	position: absolute;
+	right: 23%;
+	top: 13px;
+}
+
+#snsIcon ul {
+	margin: 0;
+}
+
+#snsIcon ul li {
+	padding: 0px 5px;
+}
+
+#nav2 ul li {
+	padding: 0px;
+	display: inline-block;
+	position: relative;
+	list-style: none;
+	font-size: 18px;
+}
+
+#nav2 ul li a {
+	font-size: 17px;
+	margin-right: 30px;
+	text-decoration: none;
+	color: rgb(231, 227, 222);
+	transition: color 0.3s;
+}
+
+.search_section {
+	position: absolute;
+	top: 53px;
+	right: 23%;
+}
+
+#user {
+	margin: 10px 0px;
+	padding: 0px;
+}
+
+#user li a:hover {
+	color: rgb(142, 17, 17)
+}
+
+#menu {
+	font-weight: bold;
+	margin: 15px 0px;
+	padding: 0px 0px 0px 10px;
+}
+
+#menu li a:hover {
+	color: rgb(142, 17, 17);
+	font-weight: bold;
+}
+
+#img_container {
+	max-width: 1400px; /* 원하는 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬을 위해 margin 추가 */
+	
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.imgBox {
+	flex: 0 0 calc(23% - 10px);
+	margin: 10.5px;
+	overflow: hidden;
+}
+
+.imgBox img {
+	width: 100%;
+	height: 100%;
+	transition: filter 0.3s;
+}
+
+.imgBox img:hover {
+	cursor: pointer;
+	filter: brightness(0.7);
+}
+
+.productInfo {
+    text-align: center; /* 가운데 정렬을 위해 text-align 속성 추가 */
+}
+
+.productName {
+    font-size: 14px; /* 원하는 글씨 크기로 설정 */
+    margin-bottom: 5px; /* 상품 이름과 가격 사이의 간격을 조절 */
+}
+
+.productPrice {
+    font-size: 12px; /* 원하는 글씨 크기로 설정 */
+}
+
+#footer {
+	position: relative;
+}
+
+#footer ul {
+	margin: 7px 0px;
+	padding: 3px;
+}
+
+#footer ul li {
+	font-size: 13px;
+	padding: 0 15px;
+	display: inline-block;
+	position: relative;
+	list-style: none;
+}
+
+#footer ul li a {
+	text-decoration: none;
+	color: rgb(231, 227, 222);
+	transition: color 0.3s;
+}
+
+#footer li a:hover {
+	color: rgb(142, 17, 17)
+}
+
+#footer_inner2 {
+	display: flex;
+	/* Flexbox 레이아웃 사용 */
+	justify-content: space-between;
+	/* 내부 요소를 양쪽 끝으로 정렬 */
+}
+
+#footer_inner2 div {
+	flex: 1;
+	text-align: left;
+}
+
+#footer_inner2 p {
+	margin-left: 15px;
+}
+
+.bank_list {
+	margin-left: 15px;
+}
+
+#footer_inner3 {
+	display: flex;
+	/* Flexbox 레이아웃 사용 */
+	justify-content: space-between;
+	/* 내부 요소를 양쪽 끝으로 정렬 */
+}
+
+#footer_inner3 div {
+	flex: 1;
+	text-align: left;
+}
+
+#footer_inner3 p {
+	margin-left: 15px;
+}
+
+#icon {
+	margin-top: 60px;
+}
+
+#footer_inner4 {
+	display: flex;
+	/* Flexbox 레이아웃 사용 */
+	justify-content: space-between;
+	/* 내부 요소를 양쪽 끝으로 정렬 */
+}
+
+#footer_inner4 div {
+	flex: 1;
+	text-align: left;
+}
+
+#footer_inner4 h6 {
+	margin-left: 15px;
+}
+
+#back_top {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 70px;
+	height: 70px;
+	z-index: 99;
+	cursor: pointer;
+	background: url(/SkinImg/btn_top_off.png) no-repeat 0 0;
+}
+
+/*
+#back_top span .btn_off{
+    -webkit-opacity: 1.0;
+    -webkit-transition: all .5s 1s ease;
+}
+*/

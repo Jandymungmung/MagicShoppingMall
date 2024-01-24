@@ -34,4 +34,12 @@ public class BoardDAOMybatis {
 		System.out.println("--> Mybatis로 getListBoard() 처리");
 		return mybatis.selectList("BoardDAO.getBoardList", vo);
 	}
+	public List<BoardVO> getBoardListMyPage(BoardVO vo) {
+		System.out.println("--> Mybatis로 getListBoardMyPage() 처리");
+		return mybatis.selectList("BoardDAO.getBoardListMyPage", vo);
+	}
+	public double countPost(BoardVO vo) {
+		System.out.println("--> Mybatis로 countPost() 처리");
+		return mybatis.selectOne("BoardDAO.countPost", vo);
+	}
 }

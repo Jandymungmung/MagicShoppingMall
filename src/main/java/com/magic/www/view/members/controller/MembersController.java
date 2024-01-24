@@ -21,9 +21,10 @@ public class MembersController {
 
 	// 회원 가입
 	@RequestMapping("/insertMember.do")
-	public String insertMember(MembersVO vo) {
+	public String insertMember(MembersVO vo, Model model) {
 		System.out.println("회원 가입 처리");
 		membersService.insertMember(vo);
+		model.addAttribute("message", "회원가입이 완료되었습니다.");
 		return "home.do";
 	}
 
@@ -35,12 +36,14 @@ public class MembersController {
 //		return "withdrawal.jsp";
 //	}
 //	회원 수정
-//	@RequestMapping("/updateMember.do")
-//	public String updateMember(MembersVO vo) {
-//		System.out.println("회원 정보 수정 처리");
-//		membersService.updateMember(MembersVO vo);
-//		return "myPage.jsp";
-//	}
+	@RequestMapping("/updateMember.do")
+	public String updateMember(MembersVO vo, HttpSession session) {
+		System.out.println("회원 정보 수정 처리");
+		membersService.updateMember(vo);
+		MembersVO result = membersService.login(vo);
+		session.setAttribute("loginOk", result);
+		return "myPage.jsp";
+	}
 
 	//아이디 중복 검사
 	@RequestMapping("/idCheck.do")

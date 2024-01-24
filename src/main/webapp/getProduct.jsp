@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
+<link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
 	<%@ include file="/WEB-INF/include/header.jsp"%>
@@ -15,6 +16,9 @@
 	<form action="updateProduct.do" method="post"
 		enctype="multipart/form-data">
 		<table border="1">
+			<tr>
+				<td><input type="hidden" name="product_number" value="${product.product_number}"></td>
+			</tr>
 			<tr>
 				<td>상품명</td>
 				<td><input type="text" name="product_name" value="${product.product_name}"></td>
@@ -41,11 +45,11 @@
 			</tr>
 			<tr>
 				<td>썸네일</td>
-				<td><input type="file" name="thumbnail" value="${product.detail_cut}"></td>
+				<td><input type="file" name="thumbnail"></td>
 			</tr>
 			<tr>
 				<td>디테일 사진</td>
-				<td><input type="file" name="detail_cut" value="${product.detail_cut}"></td>
+				<td><input type="file" name="detail_cut"></td>
 			</tr>
 			<tr>
 				<td>품절 여부</td>
@@ -69,11 +73,12 @@
 				<td><textarea name="detail_description" cols="60" rows="10" style="resize: none;">${product.detail_description}</textarea></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="등록"></td>
+				<td colspan="2"><input type="submit" value="상품 수정 완료"></td>
 			</tr>
 		</table>
 	</form>
 	<br>
+	<a href="deleteProduct.do?product_number=${product.product_number}">상품 삭제</a>
 	<a href="getProductList.do">상품 목록 가기</a>
 	</div>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>

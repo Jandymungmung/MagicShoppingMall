@@ -55,19 +55,25 @@
 	</update>
 
 	<select id="getRecommendedProductList" resultType="products">
-		SELECT
-		THUMBNAIL_FILE_NAME
+		SELECT *
 		FROM PRODUCTS
-		ORDER BY THUMBNAIL_FILE_NAME DESC
+		ORDER BY RAND()
 		LIMIT 12;
 	</select>
-	<!-- <resultMap type="#modelname" id="YourResultSet"> <id property="param1" 
-		column="columnname1" /> <result property="param2" column="columnname2" /> 
-		<result property="param3" column="columnname3" /> </resultMap> <select id="getAll" 
-		resultMap="YourResultSet"> SELECT * FROM tablename1 </select> <insert id="insertSomething" 
-		parameterType="#modelname"> INSERT INTO tablename1 (columnname1, columnname2, 
-		columnname3) VALUES(#{value1},#{value2},#{value3}) </insert> <delete id="deleteSomething" 
-		parameterType="int"> DELETE FROM tablename1 WHERE columnname1 = #{param1} 
-		</delete> -->
+
+	<delete id="deleteProduct" parameterType="products">
+		DELETE FROM PRODUCTS
+		WHERE product_number = #{product_number}
+	</delete>
+
+	<select id="getSearchProductList" resultType="products">
+		SELECT * FROM
+		PRODUCTS WHERE categories = #{categories}
+	</select>
+
+	<select id="getCategories" resultType="products">
+		SELECT DISTINCT categories
+		FROM products;
+	</select>
 
 </mapper>

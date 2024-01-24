@@ -30,7 +30,7 @@
                     <h2>현재 위치</h2>
                     <ol>
                         <li>
-                            <a href="">HOME</a>
+                            <a href="home.do">HOME</a>
                         </li>
                         <li title="현재위치">
                             <strong>LOGIN</strong>
@@ -68,13 +68,13 @@
                                         <a href="joinMembership.jsp">회원가입</a>
                                     </li>
                                 </ul>
-                                <ul class="snsArea">
+                                <!-- <ul class="snsArea">
                                     <li>
                                         <a href="#none" onclick="">
                                             <img src="./img/btn/btn_login_naver.gif" alt="네이버 로그인">
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </div>
                             <br>
                             <br>

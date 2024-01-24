@@ -28,12 +28,19 @@
 		<h2>✨ 추천 상품 ✨</h2>
 		<div id="img_container">
 			<c:forEach var="product" items="${products}">
-        <div class="imgBox" onclick="location.href='detail.jsp#none';">
-            <img src="<c:out value='./img/thumbnail/${product.thumbnail_file_name}' />">
-        </div>
-    </c:forEach>
+        		<div class="imgBox" onclick="loadProductDetail(${product.product_number});">
+            		<img src="<c:out value='./img/thumbnail/${product.thumbnail_file_name}' />">
+        		</div>
+    		</c:forEach>
 		</div>
 	</div>
+
+	<script>
+    function loadProductDetail(product_number) {
+        // 클릭한 상품 번호를 이용하여 상세 정보를 서버로 요청하는 로직
+        location.href = 'detailProduct.do?product_number=' + product_number;
+    }
+	</script>
 
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->

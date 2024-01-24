@@ -20,7 +20,25 @@ public class ProductsVO {
     private String searchKeyword;
     private String thumbnail_file_name;
     private String detail_cut_file_name;
+    private int cartNumber;
+	private String userId;
+	private int shoppingCart;
+	private int wishNumber;
+	private int wish;
+	private int quantity;
     
+	public int getWishNumber() {
+		return wishNumber;
+	}
+	public void setWishNumber(int wishNumber) {
+		this.wishNumber = wishNumber;
+	}
+	public int getWish() {
+		return wish;
+	}
+	public void setWish(int wish) {
+		this.wish = wish;
+	}
 	public int getProduct_number() {
 		return product_number;
 	}
@@ -124,6 +142,42 @@ public class ProductsVO {
 	public void setDetail_cut_file_name(String detail_cut_file_name) {
 		this.detail_cut_file_name = detail_cut_file_name;
 	}
-	
+	public int getCartNumber() {
+		return cartNumber;
+	}
+	public void setCartNumber(int cartNumber) {
+		this.cartNumber = cartNumber;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public int getShoppingCart() {
+		return shoppingCart;
+	}
+	public void setShoppingCart(int shoppingCart) {
+		this.shoppingCart = shoppingCart;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	@Override
+	public String toString() {
+		return "ProductsVO [product_number=" + product_number + ", product_name=" + product_name
+				+ ", product_english_name=" + product_english_name + ", origin=" + origin + ", price=" + price
+				+ ", stock_count=" + stock_count + ", brief_description=" + brief_description + ", thumbnail="
+				+ thumbnail + ", detail_cut=" + detail_cut + ", sold_out=" + sold_out + ", registration_date="
+				+ registration_date + ", categories=" + categories + ", detail_description=" + detail_description
+				+ ", searchCondition=" + searchCondition + ", searchKeyword=" + searchKeyword + ", thumbnail_file_name="
+				+ thumbnail_file_name + ", detail_cut_file_name=" + detail_cut_file_name + ", cartNumber=" + cartNumber
+				+ ", userId=" + userId + ", shoppingCart=" + shoppingCart + ", wishNumber=" + wishNumber + ", wish="
+				+ wish + ", quantity=" + quantity + "]";
+	}
+
     
 }

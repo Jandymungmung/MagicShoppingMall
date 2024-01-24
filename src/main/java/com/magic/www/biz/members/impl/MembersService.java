@@ -5,7 +5,7 @@ import com.magic.www.biz.members.MembersVO;
 public interface MembersService {
 	void insertMember(MembersVO vo);
 	
-//	void updateMember(MembersVO vo);
+	void updateMember(MembersVO vo);
 	
 	void deleteMember(MembersVO vo);
 

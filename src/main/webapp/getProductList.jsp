@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -22,8 +23,8 @@
 	<!-- header include -->
 	<br>
 	<br>
-	
-	<div id="back">
+	<a href="insertProduct.jsp">상품 등록</a>
+	<div id="back" style="width:80% ; margin: 0 auto;">
 		<form action="getProductList.do" method="post">
 			<table border="1">
 				<tr>
@@ -49,14 +50,14 @@
 				<tr>
 					<td>${product.product_number}</td>
 					<td><a href="getProduct.do?product_number=${product.product_number}">${product.product_name}</a></td>
-					<td>${product.price}원</td>
+					<td><fmt:formatNumber value="${product.price}" pattern="##,###,###원" /></td>
 					<td>${product.registration_date}</td>
 					<td><img src="./img/thumbnail/${product.thumbnail_file_name}" style="width: 90px; height: 90px"></td>
 				</tr>
 			</c:forEach>
 		</table>
 		
-	<a href="insertProduct.jsp">상품 등록</a>
+	
 	
 	</div>
 	

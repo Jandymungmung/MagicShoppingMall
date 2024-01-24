@@ -25,7 +25,9 @@
 					allowfullscreen></iframe>
 			</div>
 		</div>
+		<br>
 		<h2>✨ 추천 상품 ✨</h2>
+		<br>
 		<div id="img_container">
 			<div class="imgBox" onclick="location.href='detail.jsp#none';">
 				<img src="./img/product/1.큰카드재생마술.jpg">

@@ -39,7 +39,13 @@
 		<if test="searchCondition == 'content'">
 			AND content LIKE CONCAT ('%', #{searchKeyword}, '%')
 		</if>
-		ORDER BY SEQ DESC
+		ORDER BY SEQ DESC LIMIT 10
+		<if test="offset == -10">
+			OFFSET 0
+		</if>
+		<if test="offset != -10">
+			OFFSET #{offset}
+		</if>
 	</select>
 
 	<update id="updateViewCnt" parameterType="int">
@@ -47,4 +53,21 @@
 			UPDATE BOARD SET viewCnt = viewCnt+1 WHERE seq = #{seq}
 		]]>
 	</update>
+	
+	<select id="getBoardListMyPage" resultType="board">
+		SELECT * 
+		FROM BOARD
+		WHERE writer = #{writer}
+		<if test="searchCondition == 'title'">
+			AND title LIKE CONCAT ('%', #{searchKeyword}, '%')
+		</if>
+		<if test="searchCondition == 'content'">
+			AND content LIKE CONCAT ('%', #{searchKeyword}, '%')
+		</if>
+		ORDER BY SEQ DESC
+	</select>
+	
+	<select id="countPost" resultType="double">
+		select count(*) from board;
+	</select>
 </mapper>

@@ -20,6 +20,7 @@ public class ProductsDAOMybatis {
 	
 	public void deleteProduct(ProductsVO vo) {
 		System.out.println("--> Mybatis로 deleteProduct() 처리");
+		System.out.println(vo);
 		mybatis.delete("ProductsDAO.deleteProduct", vo);
 	}
 	
@@ -41,5 +42,20 @@ public class ProductsDAOMybatis {
 	public List<ProductsVO> getRecommendedProductList(ProductsVO vo) {
 		System.out.println("--> Mybatis로 getRecommendedProductList() 처리");
 		return mybatis.selectList("ProductsDAO.getRecommendedProductList", vo);
+	}
+
+	public ProductsVO getProductDetail(ProductsVO vo) {
+		System.out.println("--> Mybatis로 getProductDetail() 처리");
+		return mybatis.selectOne("ProductsDAO.getProduct", vo);
+	}
+
+	public List<ProductsVO> getSearchProductList(ProductsVO vo) {
+		System.out.println("--> Mybatis로 getSearchProductList() 처리");
+		return mybatis.selectList("ProductsDAO.getSearchProductList", vo);
+	}
+
+	public List<ProductsVO> getCategories(ProductsVO vo) {
+		System.out.println("--> Mybatis로 getCategories() 처리");
+		return mybatis.selectList("ProductsDAO.getCategories", vo);
 	}
 }

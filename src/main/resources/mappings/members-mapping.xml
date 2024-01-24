@@ -16,11 +16,22 @@
 	</insert>
 
 	<update id="updateMember" parameterType="members">
-		UPDATE tablename1
+		UPDATE members
 		SET
-		columnname1=#{param1}
+		userId=#{userId},
+		userName=#{userName},
+		userPsword=#{userPsword},
+		userEmail=#{userEmail},
+		sample4_postcode=#{sample4_postcode},
+		sample4_roadAddress=#{sample4_roadAddress},
+		sample4_jibunAddress=#{sample4_jibunAddress},
+		sample4_detailAddress=#{sample4_detailAddress},
+		sample4_extraAddress=#{sample4_extraAddress},
+		birthday=#{birthday},
+		phoneNum=#{phoneNum},
+		gender=#{gender}
 		WHERE
-		columnname2 = #{param2}
+		userId = #{userId}
 	</update>
 
 	<delete id="deleteMember" parameterType="int">
