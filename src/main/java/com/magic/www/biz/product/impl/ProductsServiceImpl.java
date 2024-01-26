@@ -57,4 +57,10 @@ public class ProductsServiceImpl implements ProductsService {
 		return productsDAO.getCategories(vo);
 	}
 
+	@Override
+	public ProductsVO getProductTotalPage(ProductsVO vo) {
+		vo.setTotalPage((int)Math.ceil(productsDAO.countPost(vo)/10.0));
+		return vo;
+	}
+
 }

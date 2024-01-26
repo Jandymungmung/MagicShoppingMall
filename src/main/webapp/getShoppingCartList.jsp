@@ -27,11 +27,12 @@
 
 		<c:choose>
             <c:when test="${empty cartList}">
-                <h1>장바구니가 비었습니다.</h1>
+                <h2 style="margin 0 auto;">🌹 장바구니가 비었습니다. 상품을 담아주세요! 🌹</h2>
+                <br>
             </c:when>
             <c:otherwise>
             <c:if test="${not empty sessionScope.loginOk and not empty sessionScope.loginOk.userName}">
-				<h4>${sessionScope.loginOk.userName}님의 장바구니 목록입니다.</h4>
+				<h5>🌹  ${sessionScope.loginOk.userName}님의 장바구니 목록입니다. 🌹</h5>
 			</c:if>
 			<br>
                 <table class="table table-striped" id="table">
@@ -41,7 +42,7 @@
                         <th>가격</th>
                         <th>수량</th>
                         <th>장바구니</th>
-                        <th></th>
+                        <th>삭제</th>
                     </tr>
 					
 					<c:set var="totalPrice" value="0" />
@@ -62,9 +63,12 @@
                         <td colspan="2"><fmt:formatNumber value="${totalPrice}" pattern="##,###,###원" /></td>
                     </tr>
                 </table>
+        <hr>
             </c:otherwise>
         </c:choose>
 	</div>
+	<br>
+	<br>
 	<br>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->

@@ -25,7 +25,7 @@
 	<br>
 	<br>
 	<div style="width: 80%; margin: 0 auto;">
-	<h4>${loginOk.userName}님이 작성하신 게시글 목록</h4>
+	<h4>📋  ${loginOk.userName}님이 작성하신 게시글 목록 📋</h4>
 		<br>
 		<br>
 		<form action="getBoardListMyPage.do" method="post">
@@ -39,6 +39,7 @@
 				</tr>
 			</table>
 		</form>
+		<br>
 		<!--  검색 종료 -->
 
 		<table class="table table-striped" id="table">
@@ -60,20 +61,8 @@
 				</tr>
 			</c:forEach>
 		</table>
-
-		<a id="writeBtn" class="btn btn-default" href="insertBoard.jsp"
-			style="color: black; background-color: white;">새글 등록</a>
-
-		<div class="text-center">
-			<ul class="pagination">
-				<li><a href="">1</a>
-				<li><a href="">2</a>
-				<li><a href="">3</a>
-				<li><a href="">4</a>
-				<li><a href="">5</a>
-			</ul>
-		</div>
 	</div>
+	<br>
 	<br>
 
 	<%@ include file="/WEB-INF/include/footer.jsp"%>

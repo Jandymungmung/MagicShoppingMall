@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.magic.www.biz.product.ProductsVO;
 import com.magic.www.biz.product.impl.ProductsService;
@@ -20,14 +21,17 @@ public class ProductsController {
 	private ProductsService productsService;
 
 	@RequestMapping("/getProductList.do")
-	public String getProductList(ProductsVO vo, Model model) {
+	public ModelAndView getProductList(ProductsVO vo, ModelAndView mav) {
 		System.out.println("상품 목록 검색 처리");
+		mav.addObject("pageNum",productsService.getProductTotalPage(vo));
+		vo.setOffset((vo.getPageNum()-1)*10);
 		if (vo.getSearchCondition() == null)
 			vo.setSearchCondition("product_name");
 		if (vo.getSearchKeyword() == null)
 			vo.setSearchKeyword("");
-		model.addAttribute("productList", productsService.getProductList(vo));
-		return "getProductList.jsp";
+		mav.addObject("productList", productsService.getProductList(vo));
+		mav.setViewName("getProductList.jsp");
+		return mav;
 	}
 	
 	@RequestMapping("/getSearchProductList.do")

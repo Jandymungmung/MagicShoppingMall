@@ -67,7 +67,7 @@
 		ORDER BY SEQ DESC
 	</select>
 	
-	<select id="countPost" resultType="double">
-		select count(*) from board;
+	<select id="countProducts" resultType="double">
+		select count(*) from board
 	</select>
 </mapper>

@@ -27,11 +27,12 @@
 
 		<c:choose>
             <c:when test="${empty wishList}">
-                <h1>등록된 관심상품이 없습니다.</h1>
+                <h2>😻 등록된 관심상품이 없습니다. 😻</h2>
+                <br>
             </c:when>
             <c:otherwise>
             <c:if test="${not empty sessionScope.loginOk and not empty sessionScope.loginOk.userName}">
-				<h4>${sessionScope.loginOk.userName}님의 관심 상품 목록입니다.</h4>
+				<h4>😻  ${sessionScope.loginOk.userName}님의 관심 상품 목록입니다. 😻</h4>
 			</c:if>
 			<br>
                 <table class="table table-striped" id="table">
@@ -53,9 +54,12 @@
                         </tr>
                     </c:forEach>
                 </table>
+        <hr>
             </c:otherwise>
         </c:choose>
 	</div>
+	<br>
+	<br>
 	<br>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->

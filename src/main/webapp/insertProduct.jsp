@@ -14,6 +14,8 @@
 	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
 	<div style="width: 65%; margin: 0 auto;">
+	<h2>🛠 상품 등록 🛠</h2>
+	<br>
 	<form action="insertProduct.do" method="post"
 		enctype="multipart/form-data">
 		<table border="1">
@@ -76,8 +78,9 @@
 		</table>
 	</form>
 	<br>
-	<a href="getProductList.do">상품 목록 가기</a>
+	<a href="getProductList.do"><img alt="상품 목록" src="./img/btn/list.jpg"></a>
 	</div>
+	<br>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->
 </body>

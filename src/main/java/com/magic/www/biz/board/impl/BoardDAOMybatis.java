@@ -40,6 +40,6 @@ public class BoardDAOMybatis {
 	}
 	public double countPost(BoardVO vo) {
 		System.out.println("--> Mybatis로 countPost() 처리");
-		return mybatis.selectOne("BoardDAO.countPost", vo);
+		return mybatis.selectOne("BoardDAO.countProducts", vo);
 	}
 }

@@ -24,17 +24,19 @@ public class MembersController {
 	public String insertMember(MembersVO vo, Model model) {
 		System.out.println("회원 가입 처리");
 		membersService.insertMember(vo);
-		model.addAttribute("message", "회원가입이 완료되었습니다.");
+		model.addAttribute("insert", "회원가입이 완료되었습니다.");
 		return "home.do";
 	}
 
 //	// 회원 탈퇴
-//	@RequestMapping("/deleteMember.do")
-//	public String deleteMember(MembersVO vo) {
-//		System.out.println("회원 탈퇴 처리");
-//		membersService.deleteMember(vo);
-//		return "withdrawal.jsp";
-//	}
+	@RequestMapping("/deleteMember.do")
+	public String deleteMember(MembersVO vo, HttpSession session, Model model) {
+		System.out.println("회원 탈퇴 처리");
+		membersService.deleteMember(vo);
+		session.invalidate();
+		model.addAttribute("delete", "회원 탈퇴가 완료되었습니다.");
+		return "home.do";
+	}
 //	회원 수정
 	@RequestMapping("/updateMember.do")
 	public String updateMember(MembersVO vo, HttpSession session) {

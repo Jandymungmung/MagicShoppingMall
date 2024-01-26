@@ -58,4 +58,8 @@ public class ProductsDAOMybatis {
 		System.out.println("--> Mybatis로 getCategories() 처리");
 		return mybatis.selectList("ProductsDAO.getCategories", vo);
 	}
+
+	public double countPost(ProductsVO vo) {
+		return mybatis.selectOne("ProductsDAO.countPost", vo);
+	}
 }

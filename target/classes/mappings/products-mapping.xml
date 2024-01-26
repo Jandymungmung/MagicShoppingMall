@@ -25,7 +25,13 @@
 		<if test="searchCondition == 'product_name'">
 			AND PRODUCT_NAME LIKE CONCAT ('%', #{searchKeyword}, '%')
 		</if>
-		ORDER BY PRODUCT_NUMBER DESC
+		ORDER BY PRODUCT_NUMBER DESC LIMIT 10
+		<if test="offset == -10">
+			OFFSET 0
+		</if>
+		<if test="offset != -10">
+			OFFSET #{offset}
+		</if>
 	</select>
 
 	<select id="getProduct" resultType="products">
@@ -74,6 +80,10 @@
 	<select id="getCategories" resultType="products">
 		SELECT DISTINCT categories
 		FROM products;
+	</select>
+	
+	<select id="countPost" resultType="double">
+		select count(*) from products
 	</select>
 
 </mapper>

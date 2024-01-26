@@ -26,6 +26,9 @@ public class ProductsVO {
 	private int wishNumber;
 	private int wish;
 	private int quantity;
+	private int totalPage;
+	private int pageNum;
+	private int offset;
     
 	public int getWishNumber() {
 		return wishNumber;
@@ -177,6 +180,24 @@ public class ProductsVO {
 				+ thumbnail_file_name + ", detail_cut_file_name=" + detail_cut_file_name + ", cartNumber=" + cartNumber
 				+ ", userId=" + userId + ", shoppingCart=" + shoppingCart + ", wishNumber=" + wishNumber + ", wish="
 				+ wish + ", quantity=" + quantity + "]";
+	}
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
+	public int getPageNum() {
+		return pageNum;
+	}
+	public void setPageNum(int pageNum) {
+		this.pageNum = pageNum;
+	}
+	public int getOffset() {
+		return offset;
+	}
+	public void setOffset(int offset) {
+		this.offset = offset;
 	}
 
     

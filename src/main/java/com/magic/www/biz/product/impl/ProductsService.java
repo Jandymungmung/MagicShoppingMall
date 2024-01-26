@@ -22,6 +22,8 @@ public interface ProductsService {
 	List<ProductsVO> getCategories(ProductsVO vo);
 
 	ProductsVO getProductDetail(ProductsVO vo);
+
+	ProductsVO getProductTotalPage(ProductsVO vo);
 	
 	
 }

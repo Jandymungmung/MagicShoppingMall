@@ -8,7 +8,7 @@
 				<c:choose>
 					<c:when test="${not empty loginOk and loginOk.userId eq 'admin'}">
    	 					<li><a href="logout.do" class="top">로그아웃</a></li>
-   	 					<li><a href="adminPage.jsp" class="top">관리 페이지</a></li>
+   	 					<!-- <li><a href="adminPage.jsp" class="top">관리 페이지</a></li> -->
    	 					<li><a href="getProductList.do" class="top">상품 관리</a></li>
 					</c:when>
 					<c:when test="${not empty loginOk}">
@@ -22,7 +22,7 @@
 					</c:otherwise>
 				</c:choose>
 				<li><a href="getBoardList.do" class="top">게시판</a></li>
-				<li><a href="home.do" class="top">즐겨찾기</a></li>
+				<!-- <li><a href="home.do" class="top">즐겨찾기</a></li> -->
 			</ul>
 
 			<!-- <div class="search_section">

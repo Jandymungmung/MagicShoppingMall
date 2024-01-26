@@ -12,7 +12,9 @@
 <body>
 	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
-	<div style="width: 60%; margin: 0 auto;">
+	<div style="width: 80%; margin: 0 auto;">
+	<h2>🛠 상품 수정 🛠</h2>
+    <br>
 	<form action="updateProduct.do" method="post"
 		enctype="multipart/form-data">
 		<table border="1">
@@ -78,9 +80,10 @@
 		</table>
 	</form>
 	<br>
-	<a href="deleteProduct.do?product_number=${product.product_number}">상품 삭제</a>
-	<a href="getProductList.do">상품 목록 가기</a>
+	<a href="deleteProduct.do?product_number=${product.product_number}"><img alt="상품 삭제" src="./img/btn/delete.jpg"></a>
+	<a href="getProductList.do"><img style="height: 31px;" alt="상품 목록 가기" src="./img/btn/list.jpg"></a>
 	</div>
+	<br>
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->
 </body>

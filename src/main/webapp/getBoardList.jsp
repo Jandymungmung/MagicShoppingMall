@@ -25,7 +25,7 @@
 	<br>
 	<br>
 	<div style="width: 80%; margin: 0 auto;">
-		<h4>자유 게시판</h4>
+		<h4>📋 자유 게시판 📋</h4>
 		<br>
 		<br>
 		<form action="getBoardList.do" method="post">
@@ -39,6 +39,7 @@
 				</tr>
 			</table>
 		</form>
+		<br>
 		<!--  검색 종료 -->
 		
 		<table class="table table-striped" id="table">
@@ -64,7 +65,7 @@
 		<c:forEach var="num" begin="1" end="${pageNum.totalPage}">
 			<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${num}">${num}</a>
 		</c:forEach>
-		<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${(pageNum.pageNum < pageNum.totalPage) ? pageNum.pageNum + 1 : pageNum.totalPage}"><span class="bi bi-caret-right-fill"></span></a>
+		<a class="btn btn-light btn-sm" href="getBoardList.do?pageNum=${(pageNum.pageNum < pageNum.totalPage) ? pageNum.pageNum + 1 : pageNum.totalPage}"><span class="bi bi-caret-right-fill"></span></a><br><br>
 
 		<a id="writeBtn" class="btn btn-default" href="insertBoard.jsp"
 			style="color: black; background-color: white;">새글 등록</a>

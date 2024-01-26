@@ -34,7 +34,7 @@
 		userId = #{userId}
 	</update>
 
-	<delete id="deleteMember" parameterType="int">
+	<delete id="deleteMember" parameterType="members">
 		<![CDATA[
 			DELETE FROM MEMBERS WHERE userId = #{userId}
 		]]>

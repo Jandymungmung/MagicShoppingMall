@@ -23,8 +23,10 @@
 	<!-- header include -->
 	<br>
 	<br>
-	<a href="insertProduct.jsp">상품 등록</a>
+	<h3>🛠 상품 관리 페이지 🛠</h3>
 	<div id="back" style="width:80% ; margin: 0 auto;">
+		<br>
+		<br>
 		<form action="getProductList.do" method="post">
 			<table border="1">
 				<tr>
@@ -35,6 +37,7 @@
 				</tr>
 			</table>
 		</form>
+		<br>
 		<!--  검색 종료 -->
 
 		<table class="table table-striped" id="table">
@@ -49,17 +52,21 @@
 			<c:forEach items="${productList}" var="product">
 				<tr>
 					<td>${product.product_number}</td>
-					<td><a href="getProduct.do?product_number=${product.product_number}">${product.product_name}</a></td>
+					<td><a class="back" href="getProduct.do?product_number=${product.product_number}">${product.product_name}</a></td>
 					<td><fmt:formatNumber value="${product.price}" pattern="##,###,###원" /></td>
 					<td>${product.registration_date}</td>
-					<td><img src="./img/thumbnail/${product.thumbnail_file_name}" style="width: 90px; height: 90px"></td>
+					<td><img src="./img/thumbnail/${product.thumbnail_file_name}" style="width: 80px; height: 80px"></td>
 				</tr>
 			</c:forEach>
 		</table>
-		
-	
-	
+		<a class="btn btn-light btn-sm" href="getProductList.do?pageNum=${(pageNum.pageNum > 1) ? pageNum.pageNum-1 : 1}"><span class="bi bi-caret-left-fill"></span></a>
+		<c:forEach var="num" begin="1" end="${pageNum.totalPage}">
+			<a class="btn btn-light btn-sm" href="getProductList.do?pageNum=${num}">${num}</a>
+		</c:forEach>
+		<a class="btn btn-light btn-sm" href="getProductList.do?pageNum=${(pageNum.pageNum < pageNum.totalPage) ? pageNum.pageNum + 1 : pageNum.totalPage}"><span class="bi bi-caret-right-fill"></span></a><br><br>
+		<a id="writeBtn" class="btn btn-default" href="insertProduct.jsp" style="color: black; background-color: white;">상품 등록</a>
 	</div>
+		<br>
 	
 	<%@ include file="/WEB-INF/include/footer.jsp" %>
 	<!-- footer include -->

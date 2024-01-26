@@ -11,7 +11,20 @@
 <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-
+	<c:if test="${not empty insert}">
+		<script>
+			window.onload = function() {
+				alert("${insert}");
+			}
+		</script>
+	</c:if>
+	<c:if test="${not empty delete}">
+		<script>
+			window.onload = function() {
+				alert("${delete}");
+			}
+		</script>
+	</c:if>
 	<%@ include file="/WEB-INF/include/header.jsp"%>
 	<!-- header include -->
 
@@ -41,6 +54,7 @@
         location.href = 'detailProduct.do?product_number=' + product_number;
     }
 	</script>
+	<br>
 
 	<%@ include file="/WEB-INF/include/footer.jsp"%>
 	<!-- footer include -->

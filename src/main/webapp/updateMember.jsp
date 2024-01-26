@@ -103,7 +103,8 @@
 			</div>
 			
 
-			<button type="submit" class="btn btn-primary">회원 수정 완료</button>
+			<button type="submit" class="btn btn-primary">회원 수정 완료</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="deleteMember.do?userId=${loginOk.userId}"><img style="height: 45px;" alt="회웡 탈퇴" src="./img/btn/deleteMember.jpg"></a>
 		</form>
 		<br>
 		<br>
